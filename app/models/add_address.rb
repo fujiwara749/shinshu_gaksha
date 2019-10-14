@@ -1,0 +1,2 @@
+class AddAddress < ApplicationRecord
+end
