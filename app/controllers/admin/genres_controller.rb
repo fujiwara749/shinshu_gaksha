@@ -24,4 +24,9 @@ def destroy
   redirect_to admin_genres_path
 end
 
+private
+  def genre_params
+  	  params.require(:genre).permit(:genre_name)
+  end
+
 end
