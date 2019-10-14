@@ -1,0 +1,17 @@
+<table class="table">
+<thead>
+<tr>
+<th>ジャンル名</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<% @genres.each do |g| %>
+<tr>
+<td><%= g.genre_name %><td>
+<td><%= link_to "削除", admin_genre_path(@genre), method: :delete, data: {confirm: 'are you sure?'} %></td>
+<% end %>   
+</tr>
+</tbody>
+</table>
