@@ -2,6 +2,11 @@ class OrdersController < ApplicationController
   def index
     @orders = Order.page(params[:page]).reverse_order
   end
+
+  def new
+    @order = Oder.new
+  end
+
   def create
     @order = Order.new(order_params)
     @order.user_id = current_user.id
